@@ -5,7 +5,7 @@ SELECT *  from students
 WHERE age > 30
 # step3
 SELECT name FROM students 
-WHERE Gender='F' AND Age>30
+WHERE Gender='F' AND Age=30
 # step4
 SELECT Points FROM students 
 WHERE id=1
