@@ -24,3 +24,26 @@ WHERE id='2';
 UPDATE students
 SET Points= points - 50
 WHERE id='1';
+
+# Creating Table
+CREATE TABLE Graduates (
+ID Integer Not Null Primary key AUTOINCREMENT,
+Name Text Not Null Unique,
+Age Integer,
+Gender Text,
+Points Integer,
+Graduation Text
+);
+
+# step10
+INSERT INTO Graduates (Name, Age, Gender, Points)
+SELECT Name, Age, Gender, Points FROM students
+WHERE ID=4; 
+# step11
+UPDATE Graduates 
+SET Graduation = '08/09/2018'
+WHERE ID='1';
+
+# step12
+DELETE FROM students 
+WHERE id='4';
