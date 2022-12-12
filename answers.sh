@@ -1,18 +1,26 @@
-# step18
-SELECT name 
-FROM students 
-WHERE Points=(SELECT max (Points) FROM students);
+# Basics Queries
 
-# step19
-SELECT avg(points) FROM students;
-# step20
+# step1
+SELECT name from students;
 
-SELECT count (name) FROM students
-WHERE Points=500;
+# step2
+SELECT * from students where age>30;
 
-# step21
-SELECT name FROM students 
-WHERE name like '%s%';
-# step22
-SELECT * from students 
-ORDER by Points DESC 
+# step3
+SELECT name FROM students WHERE Gender="F" AND Age=30;
+# step4
+SELECT points FROM students where id=1;
+
+# step5
+INSERT INTO students (Name, Age, Gender, Points)
+VALUES('Ahmad', '21', 'M', '600');
+
+# step6
+UPDATE students
+SET Points= points +50
+WHERE id='2';
+
+# step7
+UPDATE students
+SET Points= points - 50
+WHERE id='1';
