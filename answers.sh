@@ -1,15 +1,18 @@
-# join
-# step 14
-SELECT employees.Name, employees.Company, companies.Date 
-FROM employees
-INNER JOIN companies ON companies.Name = employees.Company;
-# step15
-SELECT employees.Name
-FROM employees
-INNER JOIN companies ON companies.Name=employees.Company
-WHERE companies.Date<2000;
-# step16
-SELECT employees.Name
-FROM employees
-INNER JOIN companies ON companies.Name = employees.Company
-WHERE employees.Role='Graphic Designer';
+# step18
+SELECT name 
+FROM students 
+WHERE Points=(SELECT max (Points) FROM students);
+
+# step19
+SELECT avg(points) FROM students;
+# step20
+
+SELECT count (name) FROM students
+WHERE Points=500;
+
+# step21
+SELECT name FROM students 
+WHERE name like '%s%';
+# step22
+SELECT * from students 
+ORDER by Points DESC 
